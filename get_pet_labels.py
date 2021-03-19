@@ -21,14 +21,14 @@ from os import listdir
 
 def get_pet_labels(image_dir):
 	"""
-    Parameters:
-    image_dir - The (full) path to the folder of images that are to be
-                classified by the classifier function (string)
-    Returns:
-        results_dic - Dictionary with 'key' as image filename and 'value' as a 
-        List. The list contains for following item:
-        index 0 = pet image label (string)
-    """
+	Parameters:
+	image_dir - The (full) path to the folder of images that are to be
+			classified by the classifier function (string)
+	Returns:
+		results_dic - Dictionary with 'key' as image filename and 'value' as a 
+		List. The list contains for following item:
+		index 0 = pet image label (string)
+	"""
 	
 	results_dic = dict()
 	filenames_list = listdir(image_dir)

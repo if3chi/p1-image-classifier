@@ -18,21 +18,21 @@
 import argparse
 
 def get_input_args():
-    """
-    Command Line Arguments:
-      1. Image Folder as --dir with default value 'pet_images'
-      2. CNN Model Architecture as --arch with default value 'vgg'
-      3. Text File with Dog Names as --dogfile with default value 'dognames.txt'
-    This function returns these arguments as an ArgumentParser object.
-    Parameters:
-      None - simply using argparse module to create & store command line arguments
-    Returns:
-      parse_args() -data structure that stores the command line arguments object  
-    """
-    parser = argparse.ArgumentParser()
+	"""
+	Command Line Arguments:
+		1. Image Folder as --dir with default value 'pet_images'
+		2. CNN Model Architecture as --arch with default value 'vgg'
+		3. Text File with Dog Names as --dogfile with default value 'dognames.txt'
+	This function returns these arguments as an ArgumentParser object.
+	Parameters:
+		None - simply using argparse module to create & store command line arguments
+	Returns:
+		parse_args() -data structure that stores the command line arguments object  
+	"""
+	parser = argparse.ArgumentParser()
 
-    parser.add_argument('--dir', default='pet_images/', type=str, help='Enter path to the images folder "pet_images/"')
-    parser.add_argument('--arch', default='vgg', type=str, help='Choose CNN model to use. "vgg"')
-    parser.add_argument('--dogfile', default='dognames.txt', type=str, help='Enter name of text file containing list of dog names. "dognames.txt"')
+	parser.add_argument('--dir', default='pet_images/', type=str, help='Enter path to the images folder "pet_images/"')
+	parser.add_argument('--arch', default='vgg', type=str, help='Choose CNN model to use. "vgg"')
+	parser.add_argument('--dogfile', default='dognames.txt', type=str, help='Enter name of text file containing list of dog names. "dognames.txt"')
 
-    return parser.parse_args()
+	return parser.parse_args()
