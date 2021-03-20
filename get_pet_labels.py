@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Ifesinachi Chukwuemeka
 # DATE CREATED: 19/03/2021             
-# REVISED DATE: 
+# REVISED DATE: 20/03/2021
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from 
 #          the image's filename. This function inputs: 
 #           - The Image Folder as image_dir within get_pet_labels function and 
@@ -41,7 +41,7 @@ def get_pet_labels(image_dir):
 				pet_label += name + ' '
 			
 		if filename not in results_dic:
-			results_dic[filename] = pet_label.strip()
+			results_dic[filename] = [pet_label.strip()]
 		else:
 			print("** Warning: Key=", filename, 
 				"already exists in results_dic with value =",

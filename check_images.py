@@ -4,7 +4,7 @@
 #
 # # PROGRAMMER: Ifesinachi Chukwuemeka
 # DATE CREATED: 19/03/2021                   
-# REVISED DATE: 
+# REVISED DATE: 20/03/2021
 # PURPOSE: Classifies pet images using a pretrained CNN model, compares these
 #          classifications to the true identity of the pets in the images, and
 #          summarizes how well the CNN performed on the image classification task. 
@@ -46,21 +46,10 @@ def main():
 
 	results = get_pet_labels(in_arg.dir)
 
-	# Function that checks Pet Images in the results Dictionary using results    
 	check_creating_pet_image_labels(results)
 
+	classify_images(in_arg.dir, results, in_arg.arch)
 
-	# TODO 3: Define classify_images function within the file classify_images.py
-	# Once the classify_images function has been defined replace first 'None' 
-	# in the function call with in_arg.dir and replace the last 'None' in the
-	# function call with in_arg.arch  Once you have done the replacements your
-	# function call should look like this: 
-	#             classify_images(in_arg.dir, results, in_arg.arch)
-	# Creates Classifier Labels with classifier function, Compares Labels, 
-	# and adds these results to the results dictionary - results
-	classify_images(None, results, None)
-
-	# Function that checks Results Dictionary using results    
 	check_classifying_images(results)    
 
 	
